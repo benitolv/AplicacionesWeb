@@ -15,12 +15,12 @@
 
 }
 );
-  })
+  }) 
 </script>-->
 <br><br><br><br>
 
 <div class="container" style="border: solid .5px black;  border-radius: 10px;">
-
+  
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -48,7 +48,7 @@
         </a><script type="text/javascript" src="<?php echo URL ?>Public/js/sweetalert.min.js"></script>
       </div>
 
-
+  
 </div>
 =======
 <h4><p>
