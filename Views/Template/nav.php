@@ -9,8 +9,8 @@ session_start();
       <span class="navbar-toggler-icon"></span>
     </button>
   <?php
-  if(isset($_SESSION['id_usuario'])) 
-  { 
+  if(isset($_SESSION['id_usuario']))
+  {
       if (isset($_SESSION['id_tipo_usuario']) AND $_SESSION['id_tipo_usuario']== 1)
       {
       echo $_SESSION['nombre'];
@@ -18,7 +18,7 @@ session_start();
       <script type="text/javascript">
       $(document).ready(function(){
         swal("Login!", "Login exitoso alumno!", "success")
-      }) 
+      })
     </script>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -29,11 +29,11 @@ session_start();
       <a class="dropdown-item" href="#">Ver</a>
       <a class="dropdown-item" href="#">Acentar</a>
       <a class="dropdown-item" href="#">Modificar</a>
-      </li>  
+      </li>
 
       <?php
       }
-  
+
       else
       if (isset($_SESSION['id_tipo_usuario']) AND $_SESSION['id_tipo_usuario']== 2)
       {
@@ -41,7 +41,7 @@ session_start();
       ?><script type="text/javascript">
       $(document).ready(function(){
         swal("Login!", "Login exitoso Docente!", "success")
-      }) 
+      })
     </script>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -51,7 +51,7 @@ session_start();
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Materias</a>
       <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Asignar</a>
-      </li></li> 
+      </li></li>
       <?php
         }
 
@@ -113,7 +113,7 @@ echo $_SESSION['nombre'];
     <script type="text/javascript">
       $(document).ready(function(){
         swal("Login!", "Login exitoso Jefe!", "success")
-      }) 
+      })
     </script>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -124,26 +124,26 @@ echo $_SESSION['nombre'];
       <a class="dropdown-item" href="#">Grupo</a>
       <a class="dropdown-item" href="#">Aprobacion</a>
       </li>
-      
+
 
 <?php
-      } 
-}  
+      }
+}
       ?>
     </ul>
-    
+
 <?php if (isset($_SESSION['id_tipo_usuario']))
 {
- ?>    
+ ?>
     <a class="btn btn-outline-danger"  href="<?php echo URL; ?>Login/logout">Salir</a>
 <?php
  }
 else
-{ 
+{
 ?>
 
     <a class="btn btn-outline-primary"  href="<?php echo URL; ?>Login">Login</a>
-  
+
 
 <?php } ?>
 =======
@@ -177,21 +177,21 @@ else
 <?php if (isset($_SESSION['id_tipo_usuario']))
 {
 ?>
-    <form class="form-inline my-2 my-lg-0" style="margin-left:1em;">
-      <a class="btn btn-outline-danger" href="<?php echo URL; ?>Login/logout">Salir</a>
-    </form>
+<form class="form-inline my-2 my-lg-0" style="margin-left:1em;">
+  <a class="btn btn-outline-danger" href="<?php echo URL; ?>Login/logout">Salir</a>
+</form>
 <?php
 }
 else
 //esta parte es el nav para los que no esten logueados
 {
 ?>
-    <form class="form-inline my-2 my-lg-0" style="margin-left:1em;">
-        <a class="btn btn-outline-primary" href="<?php echo URL; ?>Login">Login</a>
-    </form>
-    <form class="form-inline my-2 my-lg-0" style="margin-left:1em;">
-      <a class="btn btn-outline-primary" href="<?php echo URL; ?>Login/Registrar">Registro</a>
-    </form>
+<form class="form-inline my-2 my-lg-0" style="margin-left:1em;">
+    <a class="btn btn-outline-primary" href="<?php echo URL; ?>Login">Login</a>
+</form>
+<form class="form-inline my-2 my-lg-0" style="margin-left:1em;">
+  <a class="btn btn-outline-primary" href="<?php echo URL; ?>Login/Registrar">Registro</a>
+</form>
 
 <?php
 }
@@ -201,4 +201,3 @@ else
 >>>>>>> 6b9c16fc3c1ecf23d192e67cb52263ede2df98e0
 </div>
 </nav>
-
